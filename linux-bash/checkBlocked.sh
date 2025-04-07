@@ -24,7 +24,7 @@ do
 		country=$(echo "$info" | grep -m 1 -i "country" | awk '{print $2, $3, $4;}')
 
 		# Output and write to log
-		echo "IP: $ip, NetName: $netname, OrgName: $orgname, Address: $address, Country: $country" | tee -a checkBlocked.log
+		echo "IP: $ip, NetName: $netname, OrgName: $orgname, Address: $address, Country: $country" | tee -a checked-IPs.log
 		echo ""
 	fi
 done
